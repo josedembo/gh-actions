@@ -10,7 +10,7 @@ on:
 jobs:
   Hello-world:
     runs-on: ubuntu-latest
-    setps:
+    steps:
       - uses: actions/checkout@v2
       - name: hello
         run: echo "Hello world from  github actions"
