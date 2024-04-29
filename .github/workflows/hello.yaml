@@ -6,7 +6,7 @@ on:
   pull_request:
     branches:
       - main
-  workflow-dispatche:
+  workflow_dispatche:
 jobs:
   Hello-world:
     runs-on: ubuntu-latest
