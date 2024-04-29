@@ -1,0 +1,24 @@
+name: Hello world workflow
+on:
+  push:
+    branches:
+      - main
+  pull-request:
+    branches:
+      - main
+  workflow-dispatche:
+jobs:
+  Hello-world:
+    runs-on: ubuntu-latest
+    setps:
+      - uses: actions/checkout@v2
+      - name: hello
+        run: echo "Hello world from  github actions"
+        shell: bash
+  goobay:
+    runs-on: ubuntu-latest
+    steps:
+      - name: goodbay
+        run: echo "good bay from github action"
+        shell: bash
+
