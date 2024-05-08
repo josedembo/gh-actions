@@ -2,7 +2,7 @@ name: Post automate issue comments
 
 on:
   issues:
-    types: ["opened"]
+    types: [opened]
 
 jobs:
   experimental:
