@@ -1,0 +1,11 @@
+name: Post automate issue comments
+
+on:
+  issues:
+    types: ["opened"]
+
+jobs:
+  experimental:
+    runs-on: ubuntu-latest
+    steps:
+
