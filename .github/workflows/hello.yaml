@@ -21,4 +21,10 @@ jobs:
       - name: goodbay
         run: echo "good bay from github action"
         shell: bash
-
+  date:
+    runs-on: ubutu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: show actual date
+        run: date
+        shell: bash
