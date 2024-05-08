@@ -8,4 +8,8 @@ jobs:
   experimental:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - name: show github context
+        run: echo ${{ toJSON(github.event)}} | jq
+        shell: bash
 
