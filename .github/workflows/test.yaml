@@ -1,0 +1,20 @@
+name: Workflow test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu:latest
+    steps:
+      - use: actions/checkout@v2
+      - name: Testando  o comando shell echo
+        run: echo "testando a comando"
+        shell: bash
+
+
