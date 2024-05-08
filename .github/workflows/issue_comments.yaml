@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: show github context
-        run: echo ${{ toJSON(github.event)}} | jq
+        run: echo '${{ toJSON(github.event)}}' | jq
         shell: bash
 
