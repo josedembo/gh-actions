@@ -32,8 +32,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Creating comment on issue with api
         run: |
-          gh api repos/${OWNER}/${REPO}/issues/${ISSUE_NUMBER}/comments\
-          -f body='This is a comment created automaticaly with github api by ${OWNER} in repository:${REPO}'
+          gh api repos/${OWNER}/${REPO}/issues/${ISSUE_NUMBER}/comments -f body='This is a comment created automaticaly with github api by ${OWNER} in repository:${REPO}'
         env: 
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           OWNER: ${{ github.event.repository.owner.login }}
