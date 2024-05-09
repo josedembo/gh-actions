@@ -26,5 +26,16 @@ jobs:
 
             [1]: https://github.com/peter-evans/create-or-update-comment
           reactions: '+1'
-  
-
+  creating-comments-with-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Creating comment on issue with api
+        run: |
+          gh api -X POST https://api.github.com/repos/${OWNER}/${REPO}/issues/${ISSUE_NUMBER}/comments\
+          -f body='This is a comment created automaticaly with github api by ${OWNER} in repository:${REPO}'
+        env: 
+          - GITHUB_TOKEN: ${{sicrets.GITHUB_TOKENS}}
+          - OWNER: ${{ github.event.repository.owner.login }}
+          - REPO: ${{ github.event.repository.name }}
+          - ISSUE_NUMBER: ${{ github.event.issue.number }} 
