@@ -35,7 +35,7 @@ jobs:
           gh api repos/${OWNER}/${REPO}/issues/${ISSUE_NUMBER}/comments\
           -f body='This is a comment created automaticaly with github api by ${OWNER} in repository:${REPO}'
         env: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKENS }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           OWNER: ${{ github.event.repository.owner.login }}
           REPO: ${{ github.event.repository.name }}
           ISSUE_NUMBER: ${{ github.event.issue.number }} 
